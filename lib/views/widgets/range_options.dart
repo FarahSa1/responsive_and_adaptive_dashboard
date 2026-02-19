@@ -9,9 +9,9 @@ class RangeOptions extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(12),
       decoration: ShapeDecoration(
-        color: Color(0xfff1f1f1),
+        color: Color(0xFFFFFFFF),
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xfff1f1f1)),
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
           borderRadius: BorderRadius.circular(12),
         ),
       ),

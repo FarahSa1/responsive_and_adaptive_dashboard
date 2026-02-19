@@ -14,7 +14,8 @@ class AllExpensesAndQuikInvoiceSection extends StatelessWidget {
         //مش حل مثالي استخدم اكسباندد لتو ودجتس تحت بعض على محور واي
         // Expanded(child: AllExpenses()),
         // Expanded(child: QuickInvoice()),
-        SizedBox(height: 40,),
+        
+        // SizedBox(height: 40,),
         //الحل الامثل
         AllExpenses(),
         SizedBox(height: 24,),
