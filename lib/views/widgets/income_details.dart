@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:real_sresponsive_and_adaptive_design/models/item_details_model.dart';
 import 'package:real_sresponsive_and_adaptive_design/utils/app_styles.dart';
@@ -27,12 +29,21 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ItemDetails(itemDetailsModel: items[index]);
-      },
+    // print(MediaQuery.sizeOf(context).width.toString()); //1750 AS A BREAK POINT
+    //AFTER
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e) => ItemDetails(itemDetailsModel: e)).toList(),
     );
+    //BEFORE
+    //نفس المشلكة الي تم حلها سابقا ب ترانزاكشن ليست فيو
+    //هنا عندي استخدجام شرينكراب بترو مع كاستو سكرول فيو الي هو ليزي بيلدر فالافضل استغني عن استخدام الليست فيو بيلدر واستبدلها ب كولوم
+    // return ListView.builder(
+    //   shrinkWrap: true,
+    //   itemCount: items.length,
+    //   itemBuilder: (context, index) {
+    //     return ItemDetails(itemDetailsModel: items[index]);
+    //   },
+    // );
   }
 }

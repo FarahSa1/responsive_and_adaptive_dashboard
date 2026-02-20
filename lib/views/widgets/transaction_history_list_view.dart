@@ -28,12 +28,16 @@ class TransactionHistoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: items.length,
-      shrinkWrap: true, //هبني عدد محدود ف مفش داعي ت اكسباند
-      itemBuilder: (context, index) {
-        return TransactionItem(transactionModel: items[index]);
-      },
+    return Column(
+      children: items.map((e) => TransactionItem(transactionModel: e)).toList()
     );
+    //هنا عندي استخدجام شرينكراب بترو مع كاستو سكرول فيو الي هو ليزي بيلدر فالافضل استغني عن استخدام الليست فيو بيلدر واستبدلها ب كولوم
+    // return ListView.builder(
+    //   itemCount: items.length,
+    //   shrinkWrap: true, //هبني عدد محدود ف مفش داعي ت اكسباند
+    //   itemBuilder: (context, index) {
+    //     return TransactionItem(transactionModel: items[index]);
+    //   },
+    // );
   }
 }

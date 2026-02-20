@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child: Text(text, style: AppStyles.styleSemiBold18.copyWith(color: textColor)), //هنا فش داعي اتشيك عالكلار لانه نلابل اصلا
+        child: Text(text, style: AppStyles.styleSemiBold18(context).copyWith(color: textColor)), //هنا فش داعي اتشيك عالكلار لانه نلابل اصلا
       ),
     );
   }

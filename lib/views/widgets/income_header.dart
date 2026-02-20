@@ -3,18 +3,16 @@ import 'package:real_sresponsive_and_adaptive_design/utils/app_styles.dart';
 import 'package:real_sresponsive_and_adaptive_design/views/widgets/range_options.dart';
 
 class IncomeHeader extends StatelessWidget {
-  const IncomeHeader({
-    super.key,
-  });
+  const IncomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text('Income', style: AppStyles.styleSemiBold20,),
-        RangeOptions()
+        Text('Income', style: AppStyles.styleSemiBold20(context)),
+        RangeOptions(),
       ],
-            );
+    );
   }
 }
