@@ -1,14 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:real_sresponsive_and_adaptive_design/models/drawer_item_model.dart';
 import 'package:real_sresponsive_and_adaptive_design/utils/app_styles.dart';
 
 class InActiveDrawerItem extends StatelessWidget {
-  const InActiveDrawerItem({
-    super.key,
-    required this.drawerItemModel,
-  });
+  const InActiveDrawerItem({super.key, required this.drawerItemModel});
 
   final DrawerItemModel drawerItemModel;
 
@@ -16,18 +12,20 @@ class InActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(drawerItemModel.title, style: AppStyles.styleMedium16(context)),
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleMedium16(context),
+        ),
+      ),
     );
   }
 }
 
-
-
 class ActiveDrawerItem extends StatelessWidget {
-  const ActiveDrawerItem({
-    super.key,
-    required this.drawerItemModel,
-  });
+  const ActiveDrawerItem({super.key, required this.drawerItemModel});
 
   final DrawerItemModel drawerItemModel;
 
@@ -35,10 +33,17 @@ class ActiveDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(drawerItemModel.title, style: AppStyles.styleBold16(context)),
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.styleBold16(context),
+        ),
+      ),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(color: Color(0xff4EB7F2),),
+        decoration: const BoxDecoration(color: Color(0xff4EB7F2)),
       ),
     );
   }
